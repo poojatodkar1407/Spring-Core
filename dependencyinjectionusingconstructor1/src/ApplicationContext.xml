@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "e" class = "com.bridgeit.injection.Address">
+<constructor-arg value="pune"></constructor-arg>
+<constructor-arg value="india"></constructor-arg> 
+<constructor-arg value="maharashtra"></constructor-arg> </bean>
+
+<bean id = "obj" class = "com.bridgeit.injection.Employee">
+<constructor-arg value = "12" type = "int"></constructor-arg>
+<constructor-arg value = "pooja"></constructor-arg>
+<constructor-arg>
+	<ref bean ="e"/> 
+</constructor-arg> </bean>
+</beans>
